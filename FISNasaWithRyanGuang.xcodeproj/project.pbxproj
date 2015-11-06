@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629273B21BEBE5DD0083D266 /* FISSoundcloudAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */; settings = {ASSET_TAGS = (); }; };
+		629273B51BEBFAC30083D266 /* FISEachTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B41BEBFAC30083D266 /* FISEachTrack.m */; settings = {ASSET_TAGS = (); }; };
+		629273B81BEC19580083D266 /* FISTrackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B71BEC19580083D266 /* FISTrackButton.m */; settings = {ASSET_TAGS = (); }; };
 		62F8627B1BD94F13000AC717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F8627A1BD94F13000AC717 /* main.m */; };
 		62F8627E1BD94F13000AC717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F8627D1BD94F13000AC717 /* AppDelegate.m */; };
 		62F862811BD94F13000AC717 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F862801BD94F13000AC717 /* ViewController.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		629273B01BEBE5DD0083D266 /* FISSoundcloudAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSoundcloudAPIClient.h; sourceTree = "<group>"; };
+		629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSoundcloudAPIClient.m; sourceTree = "<group>"; };
+		629273B31BEBFAC30083D266 /* FISEachTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISEachTrack.h; sourceTree = "<group>"; };
+		629273B41BEBFAC30083D266 /* FISEachTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISEachTrack.m; sourceTree = "<group>"; };
+		629273B61BEC19580083D266 /* FISTrackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTrackButton.h; sourceTree = "<group>"; };
+		629273B71BEC19580083D266 /* FISTrackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTrackButton.m; sourceTree = "<group>"; };
 		62F862761BD94F13000AC717 /* FISNasaWithRyanGuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FISNasaWithRyanGuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F8627A1BD94F13000AC717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62F8627C1BD94F13000AC717 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,7 +116,13 @@
 				62F8627D1BD94F13000AC717 /* AppDelegate.m */,
 				62F8627F1BD94F13000AC717 /* ViewController.h */,
 				62F862801BD94F13000AC717 /* ViewController.m */,
+				629273B31BEBFAC30083D266 /* FISEachTrack.h */,
+				629273B41BEBFAC30083D266 /* FISEachTrack.m */,
 				62F862821BD94F13000AC717 /* Main.storyboard */,
+				629273B01BEBE5DD0083D266 /* FISSoundcloudAPIClient.h */,
+				629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */,
+				629273B61BEC19580083D266 /* FISTrackButton.h */,
+				629273B71BEC19580083D266 /* FISTrackButton.m */,
 				62F862881BD94F13000AC717 /* Assets.xcassets */,
 				62F8628A1BD94F13000AC717 /* LaunchScreen.storyboard */,
 				62F8628D1BD94F13000AC717 /* Info.plist */,
@@ -274,9 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F862811BD94F13000AC717 /* ViewController.m in Sources */,
+				629273B81BEC19580083D266 /* FISTrackButton.m in Sources */,
 				62F8627E1BD94F13000AC717 /* AppDelegate.m in Sources */,
+				629273B21BEBE5DD0083D266 /* FISSoundcloudAPIClient.m in Sources */,
 				62F862871BD94F13000AC717 /* FISNasaWithRyanGuang.xcdatamodeld in Sources */,
 				62F8627B1BD94F13000AC717 /* main.m in Sources */,
+				629273B51BEBFAC30083D266 /* FISEachTrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +522,7 @@
 				62F862A81BD94F13000AC717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62F862A91BD94F13000AC717 /* Build configuration list for PBXNativeTarget "FISNasaWithRyanGuangTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +531,7 @@
 				62F862AB1BD94F13000AC717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62F862AC1BD94F13000AC717 /* Build configuration list for PBXNativeTarget "FISNasaWithRyanGuangUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +540,7 @@
 				62F862AE1BD94F13000AC717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
