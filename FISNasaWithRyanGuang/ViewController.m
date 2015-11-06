@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *test;
 @property (weak, nonatomic) IBOutlet UILabel *apodTitle;
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer; // player? !!! change
+@property (strong, nonatomic) AVPlayer *audioPlayer; // player? !!! change
 @property (strong, nonatomic) NSDate * dataCapture;
 
 @property (strong, nonatomic) NSMutableArray * allTracks;
@@ -61,6 +61,8 @@
                 
                 [self.view addSubview:button];
                 
+                [self makeThisThingFloat:button]; // Ryan added animation
+                
                 button.frame = CGRectMake(10 + arc4random_uniform(100), 10 + arc4random_uniform(600), 150 + arc4random_uniform(150), 25 + arc4random_uniform(50));
                 button.backgroundColor = [UIColor redColor];
                 [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -97,5 +99,45 @@
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+-(void)makeThisThingFloat:(id)thing{
+    UIView *theThing = thing;
+    
+    [UIButton animateKeyframesWithDuration:10 delay:0 options: UIViewKeyframeAnimationOptionAllowUserInteraction animations:^{
+        [UIButton addKeyframeWithRelativeStartTime:0 relativeDuration:0.25 animations:^{
+            
+            CGFloat newX = arc4random_uniform(5);
+            CGFloat newY = arc4random_uniform(40);
+            
+            theThing.transform = CGAffineTransformMakeTranslation(newX, newY);
+            
+        }];
+        [UIButton addKeyframeWithRelativeStartTime:0.25 relativeDuration:0.25 animations:^{
+            
+            CGFloat newX = arc4random_uniform(5);
+            CGFloat newY = arc4random_uniform(50);
+            
+            theThing.transform = CGAffineTransformMakeTranslation(newX, newY);
+            
+        }];
+        [UIButton addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.25 animations:^{
+            CGFloat newX = arc4random_uniform(5);
+            CGFloat newY = arc4random_uniform(60);
+            
+            theThing.transform = CGAffineTransformMakeTranslation(newX, newY);
+            
+        }];
+        [UIButton addKeyframeWithRelativeStartTime:0.75 relativeDuration:0.25 animations:^{
+            CGFloat newX = arc4random_uniform(5);
+            CGFloat newY = arc4random_uniform(50);
+            
+            theThing.transform = CGAffineTransformMakeTranslation(newX, newY);
+            
+        }];
+    } completion:^(BOOL finished) {
+        [self makeThisThingFloat:(theThing)];
+    }];
+}
+
 
 @end
