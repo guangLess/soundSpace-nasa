@@ -10,6 +10,10 @@
 		629273B21BEBE5DD0083D266 /* FISSoundcloudAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */; settings = {ASSET_TAGS = (); }; };
 		629273B51BEBFAC30083D266 /* FISEachTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B41BEBFAC30083D266 /* FISEachTrack.m */; settings = {ASSET_TAGS = (); }; };
 		629273B81BEC19580083D266 /* FISTrackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B71BEC19580083D266 /* FISTrackButton.m */; settings = {ASSET_TAGS = (); }; };
+		629273BE1BED42B10083D266 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629273BB1BED42B10083D266 /* cross@2x.png */; settings = {ASSET_TAGS = (); }; };
+		629273BF1BED42B10083D266 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629273BC1BED42B10083D266 /* clock@2x.png */; settings = {ASSET_TAGS = (); }; };
+		629273C01BED42B10083D266 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629273BD1BED42B10083D266 /* check@2x.png */; settings = {ASSET_TAGS = (); }; };
+		629273C31BED4CA90083D266 /* ConnectedLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273C21BED4CA90083D266 /* ConnectedLines.m */; settings = {ASSET_TAGS = (); }; };
 		62F8627B1BD94F13000AC717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F8627A1BD94F13000AC717 /* main.m */; };
 		62F8627E1BD94F13000AC717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F8627D1BD94F13000AC717 /* AppDelegate.m */; };
 		62F862811BD94F13000AC717 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F862801BD94F13000AC717 /* ViewController.m */; };
@@ -45,6 +49,11 @@
 		629273B41BEBFAC30083D266 /* FISEachTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISEachTrack.m; sourceTree = "<group>"; };
 		629273B61BEC19580083D266 /* FISTrackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTrackButton.h; sourceTree = "<group>"; };
 		629273B71BEC19580083D266 /* FISTrackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTrackButton.m; sourceTree = "<group>"; };
+		629273BB1BED42B10083D266 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		629273BC1BED42B10083D266 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
+		629273BD1BED42B10083D266 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		629273C11BED4CA90083D266 /* ConnectedLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedLines.h; sourceTree = "<group>"; };
+		629273C21BED4CA90083D266 /* ConnectedLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedLines.m; sourceTree = "<group>"; };
 		62F862761BD94F13000AC717 /* FISNasaWithRyanGuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FISNasaWithRyanGuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F8627A1BD94F13000AC717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62F8627C1BD94F13000AC717 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,10 +132,15 @@
 				629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */,
 				629273B61BEC19580083D266 /* FISTrackButton.h */,
 				629273B71BEC19580083D266 /* FISTrackButton.m */,
+				629273C11BED4CA90083D266 /* ConnectedLines.h */,
+				629273C21BED4CA90083D266 /* ConnectedLines.m */,
 				62F862881BD94F13000AC717 /* Assets.xcassets */,
 				62F8628A1BD94F13000AC717 /* LaunchScreen.storyboard */,
 				62F8628D1BD94F13000AC717 /* Info.plist */,
 				62F862851BD94F13000AC717 /* FISNasaWithRyanGuang.xcdatamodeld */,
+				629273BB1BED42B10083D266 /* cross@2x.png */,
+				629273BC1BED42B10083D266 /* clock@2x.png */,
+				629273BD1BED42B10083D266 /* check@2x.png */,
 				62F862791BD94F13000AC717 /* Supporting Files */,
 			);
 			path = FISNasaWithRyanGuang;
@@ -261,9 +275,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629273BF1BED42B10083D266 /* clock@2x.png in Resources */,
 				62F8628C1BD94F13000AC717 /* LaunchScreen.storyboard in Resources */,
 				62F862891BD94F13000AC717 /* Assets.xcassets in Resources */,
 				62F862841BD94F13000AC717 /* Main.storyboard in Resources */,
+				629273BE1BED42B10083D266 /* cross@2x.png in Resources */,
+				629273C01BED42B10083D266 /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F862811BD94F13000AC717 /* ViewController.m in Sources */,
+				629273C31BED4CA90083D266 /* ConnectedLines.m in Sources */,
 				629273B81BEC19580083D266 /* FISTrackButton.m in Sources */,
 				62F8627E1BD94F13000AC717 /* AppDelegate.m in Sources */,
 				629273B21BEBE5DD0083D266 /* FISSoundcloudAPIClient.m in Sources */,
