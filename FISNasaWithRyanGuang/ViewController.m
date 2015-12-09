@@ -24,6 +24,7 @@
 
 @property (strong, nonatomic) NSMutableArray * allTracks;
 @property (strong, nonatomic) UILabel * soundTitel;
+@property (weak, nonatomic) IBOutlet UIImageView *beluga;
 
 @end
 
@@ -32,27 +33,58 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    self.allTracks = [NSMutableArray new];
-    //[self getAllTracks];
+    self.allTracks = [NSMutableArray new]; // singleTon class make it into.
     [self buttonManage];
     [self getApod];
+
+
     
-   // ConnectedLines *view = [[ConnectedLines alloc]initWithFrame:CGRectMake(110, 100, 10, 10)];
-   // [self.view addSubview:view];
-    
-    /*
-     NSString *trackID = @"100026228";
-     NSString *clientID = @"YOUR_CLIENT_ID";
-     NSURL *trackURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.soundcloud.com/tracks/%@/stream?client_id=%@", trackID, clientID]];
-     
-     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:trackURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-     // self.player is strong property
-     self.player = [[AVAudioPlayer alloc] initWithData:data error:nil];
-     [self.player play];
-     }];
-     [task resume];
-     */
+    //    ConnectedLines * lineView = [[ConnectedLines alloc]initWithFrame:CGRectMake(200, 330, 10, 10)];
+    //    lineView.backgroundColor = [UIColor blackColor];
+    //    [self.view addSubview:lineView];
+    //    //self.apodTitle.text = @"Alooooooh";
+    //   [self applyMotionEffectToView:lineView withX:@(-40) andY:@(15)];
+    [self applyMotionEffectToView:self.apodTitle withX:@(90) andY:@(0)];
+    [self applyMotionEffectToView:self.beluga withX:@(-30) andY:@(50)];
 }
+
+
+-(void)getApod{
+    //http://apod.nasa.gov/apod/ap151108.html
+    NSString * urlS = @"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY";
+    NSURL * url = [NSURL URLWithString:urlS];
+    NSData * apiData = [NSData dataWithContentsOfURL:url];
+    NSDictionary * apiResult = [NSJSONSerialization JSONObjectWithData:apiData options:0 error:nil];
+    
+    NSString * imageURLString = [apiResult objectForKey:@"url"];
+    NSString * title = [apiResult objectForKey:@"title"];
+    self.apodTitle.text = title;
+    
+    NSURL * imageURL =[NSURL URLWithString:imageURLString];
+    NSData *imageData2 = [NSData dataWithContentsOfURL:imageURL];
+    UIImage * testImage = [UIImage imageWithData:imageData2];
+    self.test.image = testImage;
+    [self applyMotionEffectToView:self.test withX:@(50) andY:@(-50)];
+    
+}
+
+-(void)applyMotionEffectToView:(UIView *)view withX:(id)x andY:(id)y{
+    
+    UIInterpolatingMotionEffect * xMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    
+    xMotionEffect.minimumRelativeValue = y;
+    xMotionEffect.maximumRelativeValue = x;
+    
+    UIInterpolatingMotionEffect * yMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+   
+   yMotionEffect.minimumRelativeValue = x;
+   yMotionEffect.maximumRelativeValue = y;
+    
+    [view addMotionEffect:xMotionEffect];
+    [view addMotionEffect:yMotionEffect];
+
+}
+
 
 -(void)buttonManage{
     
@@ -157,21 +189,5 @@
     }];
 }
 
--(void)getApod{
-    
-    NSString * urlS = @"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY";
-    NSURL * url = [NSURL URLWithString:urlS];
-    NSData * apiData = [NSData dataWithContentsOfURL:url];
-    NSDictionary * apiResult = [NSJSONSerialization JSONObjectWithData:apiData options:0 error:nil];
-    
-    NSString * imageURLString = [apiResult objectForKey:@"url"];
-    NSString * title = [apiResult objectForKey:@"title"];
-    self.apodTitle.text = title;
-    
-    NSURL * imageURL =[NSURL URLWithString:imageURLString];
-    NSData *imageData2 = [NSData dataWithContentsOfURL:imageURL];
-    UIImage * testImage = [UIImage imageWithData:imageData2];
-    self.test.image = testImage;
-}
 
 @end

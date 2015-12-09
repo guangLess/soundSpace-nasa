@@ -80,7 +80,7 @@
     
     float tempT = self.t;
     
-    float r =7;
+    float r =37;
     
     for ( float i = 1 ; i < 720 ; i = i+ iv){
         
@@ -98,7 +98,7 @@
     self.layerY.path = self.path.CGPath;
     self.layerY.strokeColor = [UIColor yellowColor].CGColor;
     
-    self.layerY.lineWidth = 0.2;
+    self.layerY.lineWidth = 0.3;
     self.layerY.fillColor = nil;
     
 }

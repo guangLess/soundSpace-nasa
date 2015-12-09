@@ -37,7 +37,7 @@ NSString *const nasaID = @"112904040";
      NSString * title = [apiResult objectForKey:@"title"];
      self.apodTitle.text = title;
      
-     NSURL * imageURL =[NSURL URLWithString:imageURLString];
+     NSURL * imageURL =[NSURL URLWithString:imageURLString]; 
      NSData *imageData2 = [NSData dataWithContentsOfURL:imageURL];
      UIImage * testImage = [UIImage imageWithData:imageData2];
      self.test.image = testImage;
