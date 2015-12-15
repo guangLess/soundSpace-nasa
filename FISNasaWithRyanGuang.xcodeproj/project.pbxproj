@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62274B281BF5A22A00C25D3A /* beluga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62274B271BF5A22A00C25D3A /* beluga.jpg */; };
 		629273B21BEBE5DD0083D266 /* FISSoundcloudAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */; };
 		629273B51BEBFAC30083D266 /* FISEachTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B41BEBFAC30083D266 /* FISEachTrack.m */; };
 		629273B81BEC19580083D266 /* FISTrackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273B71BEC19580083D266 /* FISTrackButton.m */; };
-		629273BE1BED42B10083D266 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629273BB1BED42B10083D266 /* cross@2x.png */; };
-		629273BF1BED42B10083D266 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629273BC1BED42B10083D266 /* clock@2x.png */; };
-		629273C01BED42B10083D266 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629273BD1BED42B10083D266 /* check@2x.png */; };
-		629273C31BED4CA90083D266 /* ConnectedLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 629273C21BED4CA90083D266 /* ConnectedLines.m */; };
+		62C746FD1C2098E300540EB3 /* netWorkError.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62C746FC1C2098E300540EB3 /* netWorkError.jpg */; };
 		62F8627B1BD94F13000AC717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F8627A1BD94F13000AC717 /* main.m */; };
 		62F8627E1BD94F13000AC717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F8627D1BD94F13000AC717 /* AppDelegate.m */; };
 		62F862811BD94F13000AC717 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F862801BD94F13000AC717 /* ViewController.m */; };
@@ -24,6 +20,7 @@
 		62F8628C1BD94F13000AC717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F8628A1BD94F13000AC717 /* LaunchScreen.storyboard */; };
 		62F862971BD94F13000AC717 /* FISNasaWithRyanGuangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F862961BD94F13000AC717 /* FISNasaWithRyanGuangTests.m */; };
 		62F862A21BD94F13000AC717 /* FISNasaWithRyanGuangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F862A11BD94F13000AC717 /* FISNasaWithRyanGuangUITests.m */; };
+		C45B6574E16E954F6EB63A40 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F58BDC43ECBB70192697993 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,18 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		62274B271BF5A22A00C25D3A /* beluga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beluga.jpg; sourceTree = "<group>"; };
 		629273B01BEBE5DD0083D266 /* FISSoundcloudAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSoundcloudAPIClient.h; sourceTree = "<group>"; };
 		629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSoundcloudAPIClient.m; sourceTree = "<group>"; };
 		629273B31BEBFAC30083D266 /* FISEachTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISEachTrack.h; sourceTree = "<group>"; };
 		629273B41BEBFAC30083D266 /* FISEachTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISEachTrack.m; sourceTree = "<group>"; };
 		629273B61BEC19580083D266 /* FISTrackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTrackButton.h; sourceTree = "<group>"; };
 		629273B71BEC19580083D266 /* FISTrackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTrackButton.m; sourceTree = "<group>"; };
-		629273BB1BED42B10083D266 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
-		629273BC1BED42B10083D266 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
-		629273BD1BED42B10083D266 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
-		629273C11BED4CA90083D266 /* ConnectedLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedLines.h; sourceTree = "<group>"; };
-		629273C21BED4CA90083D266 /* ConnectedLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedLines.m; sourceTree = "<group>"; };
+		62C746FC1C2098E300540EB3 /* netWorkError.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = netWorkError.jpg; sourceTree = "<group>"; };
 		62F862761BD94F13000AC717 /* FISNasaWithRyanGuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FISNasaWithRyanGuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F8627A1BD94F13000AC717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62F8627C1BD94F13000AC717 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +65,9 @@
 		62F8629D1BD94F13000AC717 /* FISNasaWithRyanGuangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FISNasaWithRyanGuangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F862A11BD94F13000AC717 /* FISNasaWithRyanGuangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FISNasaWithRyanGuangUITests.m; sourceTree = "<group>"; };
 		62F862A31BD94F13000AC717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F58BDC43ECBB70192697993 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE968DDBC195831A530828C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E5054326D4AA3D6D13660D8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45B6574E16E954F6EB63A40 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +103,8 @@
 				62F862951BD94F13000AC717 /* FISNasaWithRyanGuangTests */,
 				62F862A01BD94F13000AC717 /* FISNasaWithRyanGuangUITests */,
 				62F862771BD94F13000AC717 /* Products */,
+				A25BCBC692BF69D2AC52CB47 /* Pods */,
+				FF2EA6DB59A3B0F260946659 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,16 +132,11 @@
 				629273B11BEBE5DD0083D266 /* FISSoundcloudAPIClient.m */,
 				629273B61BEC19580083D266 /* FISTrackButton.h */,
 				629273B71BEC19580083D266 /* FISTrackButton.m */,
-				629273C11BED4CA90083D266 /* ConnectedLines.h */,
-				629273C21BED4CA90083D266 /* ConnectedLines.m */,
 				62F862881BD94F13000AC717 /* Assets.xcassets */,
 				62F8628A1BD94F13000AC717 /* LaunchScreen.storyboard */,
 				62F8628D1BD94F13000AC717 /* Info.plist */,
 				62F862851BD94F13000AC717 /* FISNasaWithRyanGuang.xcdatamodeld */,
-				62274B271BF5A22A00C25D3A /* beluga.jpg */,
-				629273BB1BED42B10083D266 /* cross@2x.png */,
-				629273BC1BED42B10083D266 /* clock@2x.png */,
-				629273BD1BED42B10083D266 /* check@2x.png */,
+				62C746FC1C2098E300540EB3 /* netWorkError.jpg */,
 				62F862791BD94F13000AC717 /* Supporting Files */,
 			);
 			path = FISNasaWithRyanGuang;
@@ -175,6 +168,23 @@
 			path = FISNasaWithRyanGuangUITests;
 			sourceTree = "<group>";
 		};
+		A25BCBC692BF69D2AC52CB47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5054326D4AA3D6D13660D8F /* Pods.debug.xcconfig */,
+				DCE968DDBC195831A530828C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF2EA6DB59A3B0F260946659 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F58BDC43ECBB70192697993 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62F862A61BD94F13000AC717 /* Build configuration list for PBXNativeTarget "FISNasaWithRyanGuang" */;
 			buildPhases = (
+				2C2A7F9D6512E5BC74E4C6D5 /* Check Pods Manifest.lock */,
 				62F862721BD94F13000AC717 /* Sources */,
 				62F862731BD94F13000AC717 /* Frameworks */,
 				62F862741BD94F13000AC717 /* Resources */,
+				C45A4FECAB577A3A2BCD3EDB /* Embed Pods Frameworks */,
+				5F1887089BC45C5A5FD53D86 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,13 +291,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				629273BF1BED42B10083D266 /* clock@2x.png in Resources */,
 				62F8628C1BD94F13000AC717 /* LaunchScreen.storyboard in Resources */,
 				62F862891BD94F13000AC717 /* Assets.xcassets in Resources */,
 				62F862841BD94F13000AC717 /* Main.storyboard in Resources */,
-				629273BE1BED42B10083D266 /* cross@2x.png in Resources */,
-				62274B281BF5A22A00C25D3A /* beluga.jpg in Resources */,
-				629273C01BED42B10083D266 /* check@2x.png in Resources */,
+				62C746FD1C2098E300540EB3 /* netWorkError.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,13 +314,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C2A7F9D6512E5BC74E4C6D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F1887089BC45C5A5FD53D86 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C45A4FECAB577A3A2BCD3EDB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62F862721BD94F13000AC717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				62F862811BD94F13000AC717 /* ViewController.m in Sources */,
-				629273C31BED4CA90083D266 /* ConnectedLines.m in Sources */,
 				629273B81BEC19580083D266 /* FISTrackButton.m in Sources */,
 				62F8627E1BD94F13000AC717 /* AppDelegate.m in Sources */,
 				629273B21BEBE5DD0083D266 /* FISSoundcloudAPIClient.m in Sources */,
@@ -455,6 +512,7 @@
 		};
 		62F862A71BD94F13000AC717 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5054326D4AA3D6D13660D8F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FISNasaWithRyanGuang/Info.plist;
@@ -467,6 +525,7 @@
 		};
 		62F862A81BD94F13000AC717 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE968DDBC195831A530828C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FISNasaWithRyanGuang/Info.plist;

@@ -11,9 +11,7 @@
 #import "FISSoundcloudAPIClient.h"
 #import "FISEachTrack.h"
 #import "FISTrackButton.h"
-
-#import "ConnectedLines.h"
-
+#import <AFNetworking/UIKit+AFNetworking.h>
 
 @interface ViewController ()
 
@@ -24,7 +22,7 @@
 
 @property (strong, nonatomic) NSMutableArray * allTracks;
 @property (strong, nonatomic) UILabel * soundTitel;
-@property (weak, nonatomic) IBOutlet UIImageView *beluga;
+//@property (weak, nonatomic) IBOutlet UIImageView *beluga;
 
 @end
 
@@ -36,36 +34,62 @@
     self.allTracks = [NSMutableArray new]; // singleTon class make it into.
     [self buttonManage];
     [self getApod];
-
-
-    
-    //    ConnectedLines * lineView = [[ConnectedLines alloc]initWithFrame:CGRectMake(200, 330, 10, 10)];
-    //    lineView.backgroundColor = [UIColor blackColor];
-    //    [self.view addSubview:lineView];
-    //    //self.apodTitle.text = @"Alooooooh";
-    //   [self applyMotionEffectToView:lineView withX:@(-40) andY:@(15)];
     [self applyMotionEffectToView:self.apodTitle withX:@(90) andY:@(0)];
-    [self applyMotionEffectToView:self.beluga withX:@(-30) andY:@(50)];
+    //[self applyMotionEffectToView:self.beluga withX:@(-30) andY:@(50)];
 }
 
 
 -(void)getApod{
     //http://apod.nasa.gov/apod/ap151108.html
-    NSString * urlS = @"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY";
-    NSURL * url = [NSURL URLWithString:urlS];
-    NSData * apiData = [NSData dataWithContentsOfURL:url];
-    NSDictionary * apiResult = [NSJSONSerialization JSONObjectWithData:apiData options:0 error:nil];
-    
-    NSString * imageURLString = [apiResult objectForKey:@"url"];
-    NSString * title = [apiResult objectForKey:@"title"];
-    self.apodTitle.text = title;
-    
-    NSURL * imageURL =[NSURL URLWithString:imageURLString];
-    NSData *imageData2 = [NSData dataWithContentsOfURL:imageURL];
-    UIImage * testImage = [UIImage imageWithData:imageData2];
-    self.test.image = testImage;
+//    NSString * urlS = @"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY";
+//    NSURL * url = [NSURL URLWithString:urlS];
+//    NSData * apiData = [NSData dataWithContentsOfURL:url];
+//    NSDictionary * apiResult = [NSJSONSerialization JSONObjectWithData:apiData options:0 error:nil];
+//    
+//    NSString * imageURLString = [apiResult objectForKey:@"url"];
+//    NSString * title = [apiResult objectForKey:@"title"];
+//    self.apodTitle.text = title;
+//    
+//    NSURL * imageURL =[NSURL URLWithString:imageURLString];
+//    NSData *imageData2 = [NSData dataWithContentsOfURL:imageURL];
+//    UIImage * testImage = [UIImage imageWithData:imageData2];
+//    self.test.image = testImage;
     [self applyMotionEffectToView:self.test withX:@(50) andY:@(-50)];
     
+    
+//    // URL request. If image load image, else load defalut image. The rest works stay the same.
+//    
+//    
+//
+//    //NSURL *url = [NSURL URLWithString:@"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY"];
+//    AFHTTPSessionManager * sessionManager = [AFHTTPSessionManager manager];
+//
+//    [sessionManager GET:@"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"responseObject%@",responseObject);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        //
+//    }];
+
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:@"https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            self.test.image = [UIImage imageNamed:@"netWorkError.jpg"];
+            //error alertView for music
+        } else {
+            NSLog(@"%@ %@", response, responseObject);
+            NSData * apodData = [NSData dataWithContentsOfURL: [NSURL URLWithString:[responseObject objectForKey:@"url"]]];
+            
+            self.test.image = [UIImage imageWithData: apodData];
+            self.apodTitle.text = [responseObject objectForKey:@"title"];
+        }
+    }];
+    [dataTask resume];
 }
 
 -(void)applyMotionEffectToView:(UIView *)view withX:(id)x andY:(id)y{
@@ -104,16 +128,13 @@
                 
                 UIImageView * image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cross"]];
                 [button addSubview:image];
-                
 //                ConnectedLines *view = [[ConnectedLines alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
 //                [button addSubview:view];
                 //button.backgroundColor = [UIColor redColor];
                 [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
             }];
         }
-        
     }];
-
 }
 
 
@@ -135,12 +156,11 @@
 
 -(void)getAllTracks:(void (^)(NSArray * tracks))tracksReady{
  
-   [ FISSoundcloudAPIClient getSound:^(NSArray *tracks) {
-       
+   [FISSoundcloudAPIClient getSound:^(NSArray *tracks) {
        for (NSDictionary * eachTrack in tracks) {
            FISEachTrack * tracClass = [FISEachTrack activeSoundTrack:eachTrack];
            [self.allTracks addObject:tracClass];
-           NSLog(@"-- %@",tracClass.title);
+           //NSLog(@"-- %@",tracClass.title);
        }
        tracksReady(self.allTracks);
    }];
@@ -188,6 +208,5 @@
         [self makeThisThingFloat:(theThing)];
     }];
 }
-
 
 @end
